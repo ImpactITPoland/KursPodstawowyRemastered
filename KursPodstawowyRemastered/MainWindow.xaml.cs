@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace KursPodstawowyRemastered
 {
@@ -20,8 +8,37 @@ namespace KursPodstawowyRemastered
     /// </summary>
     public partial class MainWindow : Window
     {
-        // Zmienna
-        public int a = 1;
+        #region Zmienne i ich typy
+
+        #region Popularne typy zmiennych
+
+        byte malaLiczba;                    // (1 bajt)     | od 0 do 255
+        short liczbaCalkowitaKrotka;        // (2 bajty)    | od -32 768 do 32  767
+        int liczbaCalkowita;                // (4 bajty)    | od -2 147 483 448 do 2 147 483 448
+        long liczbaCalkowitaDluga;          // (8 bajtów)   | od -9 223 372 036 854 777 808 do -9 223 372 036 854 777 807
+        float liczbaZmiennoprzecinkowa;     // (4 bajty)
+        double liczbaZmiennoprzecinkowa2;   // (8 bajtów)
+        bool prawdaFalsz;                   // (1 bajt)
+        string tekst;
+        object obiekt;                       // Przechowuje każdy obiekt
+
+        #endregion
+
+        #region Bardziej "zaawansowane" typy zmiennych
+
+        char ZnakUnicode = 'Z';             // Reprezentuje jeden znak
+        sbyte LiczbaCalkowita;
+        Int16 LiczbaCalkowita16Bitowa;      // = short
+        Int32 LiczbaCalkowita32Bitowa;      // = int
+        Int64 LiczbaCalkowita64Bitowa;      // = long
+        ushort liczbaCalkowitaKrotkaDodatnia;
+        uint liczbaCalkowitaDodatnia;
+        ulong liczbaCalkowitaDlugaDodatnia;
+
+        #endregion
+
+        #endregion
+
 
         // Konstruktor klasy
         public MainWindow()

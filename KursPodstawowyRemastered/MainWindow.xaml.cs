@@ -55,20 +55,18 @@ namespace KursPodstawowyRemastered
 
         #endregion
 
+        int liczbaPolubien = 10; // Testowa zmienna
+        float r = 10f; // Zmienna pomocnicza
 
-
-        // Konstruktor klasy
+        #region Konstruktory Klasy
+        // Bazowy konstruktor klasy
         public MainWindow()
         {
             InitializeComponent();
         }
+        #endregion
 
-
-        int liczbaPolubien = 10; // Testowa zmienna
-        float r = 10f; // zmienna pomocnicza
-
-
-
+        #region Metody Pomocnicze
 
         public void Operatory()
         {
@@ -104,14 +102,14 @@ namespace KursPodstawowyRemastered
             var wynik14 = (zmiennaLogiczna1 && zmiennaLogiczna2); // zwróci [true] gdy A i B mają wartośc true (suma logiczna)
             var wynik15 = (zmiennaLogiczna1 || zmiennaLogiczna2); // zwróci [true] gdy A lub B mają wartośc true (alternatywa logiczna)
             var wynik16 = (!zmiennaLogiczna1); // zwróci [true] A ma wartośc false (negacja logiczna)
-            var wynik16 = (!zmiennaLogiczna1); // zwróci [true] A ma wartośc false (negacja logiczna)
+            var wynik17 = (!zmiennaLogiczna1); // zwróci [true] A ma wartośc false (negacja logiczna)
 
 
 
             // Operatory matematyczne - sztuczki czyli skracanie zapisu
             zmiennaLiczbowa1 += 3; // skraca zapis => A = A + 3
-            zmiennaLiczbowa1 =+ 3; // skraca zapis => A = 3 + A
-            zmiennaLiczbowa1 =- 3; // skraca zapis => A = 3 - A
+            zmiennaLiczbowa1 = +3; // skraca zapis => A = 3 + A
+            zmiennaLiczbowa1 = -3; // skraca zapis => A = 3 - A
             zmiennaLiczbowa1 *= 3; // skraca zapis => A = 3 * A
 
         }
@@ -120,22 +118,30 @@ namespace KursPodstawowyRemastered
         public void PierwszaMetoda()
         {
             var wynik = PI * r * r;
-            DrugaMetoda(naszeA);
 
-            if(wynik > 30)
+            DrugaMetoda("aaaa");
+
+            if (wynik > 30)
             {
                 int klamrowaPulapka = 1;
             }
 
-           // var wynik2 = PI + klamrowaPulapka; // BAAD!!!
+            // var wynik2 = PI + klamrowaPulapka; // BAAD!!!
 
 
             var naszPierwszyVar = liczbaPolubien; // magiczny var-1
         }
 
+        /// <summary>
+        /// To jest testowa metoda która przyjmuje zawsze 'aaaaa'
+        /// </summary>
+        /// <param name="a">Super Parametr 'aaaa'</param>
         public void DrugaMetoda(string a)
         {
             var naszDrugiVar = liczbaPolubien; // magiczny var-2
         }
+        #endregion
+
+
     }
 }

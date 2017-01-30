@@ -46,6 +46,17 @@ namespace KursPodstawowyRemastered
 
         #endregion
 
+        #region Zasiegi zmiennych
+
+        public int zmiennaPubliczna = 1; // Zmienna publiczna - wszyscy mają do niej dostęp
+        internal int zmiennaInternal = 1; // Zmienna wewnętrzna - dostęp tylko z poziomu własnego programu (nie najszczęśliwsza interpretacja)
+        private int zmiennaPrywatna = 1; // Zmienna prywatna - zasięg tylko w obrębie klasy
+
+
+        #endregion
+
+
+
         // Konstruktor klasy
         public MainWindow()
         {
@@ -55,6 +66,9 @@ namespace KursPodstawowyRemastered
 
         int liczbaPolubien = 10; // Testowa zmienna
         float r = 10f; // zmienna pomocnicza
+
+
+
 
         public void Operatory()
         {
@@ -107,6 +121,14 @@ namespace KursPodstawowyRemastered
         {
             var wynik = PI * r * r;
             DrugaMetoda(naszeA);
+
+            if(wynik > 30)
+            {
+                int klamrowaPulapka = 1;
+            }
+
+           // var wynik2 = PI + klamrowaPulapka; // BAAD!!!
+
 
             var naszPierwszyVar = liczbaPolubien; // magiczny var-1
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows;
 
 namespace KursPodstawowyRemastered
@@ -63,8 +64,70 @@ namespace KursPodstawowyRemastered
         public MainWindow()
         {
             InitializeComponent();
+            Instrukcje();
         }
         #endregion
+
+        #region Instrukcje
+
+        private void Instrukcje()
+        {
+            testowyTextBlock.Text = "Start";
+            var warunek = true;
+
+            // stan kobiecej drukarki
+            var liczba = 150; // 0 = nie działa; 1 = działa; 2 = może;
+
+            //testowyTextBlock.Text = (warunek) ? "3" : "0";
+            #region Instrukcja IF
+            if (liczba > 1 && liczba < 100)
+            {
+                testowyTextBlock.Text = "Prawda 1";
+            }
+            else if (liczba > 100 && liczba < 200)
+            {
+                testowyTextBlock.Text = "Prawda 2";
+            }
+            else
+            {
+                testowyTextBlock.Text = "Fałsz";
+            }
+            #endregion
+
+            #region Instrukcja Switch
+
+            switch (liczba)
+            {
+                case 0:
+                    testowyTextBlock.Text = "Nie działa";
+                    break;
+                case 1:
+                    testowyTextBlock.Text = "Działa";
+                    break;
+                case 2:
+                    testowyTextBlock.Text = "MOŻE!!!";
+                    break;
+
+                default:
+                    testowyTextBlock.Text = "UPS !!!";
+                    break;
+            }
+
+            #endregion
+
+            #region Instrukcja FOR
+
+            for (int i = 0; i < 10; i++)
+            {
+                testowyTextBlock.Text = i.ToString();
+            }
+
+            #endregion
+        }
+
+        #endregion
+
+
 
         #region Metody Pomocnicze
 

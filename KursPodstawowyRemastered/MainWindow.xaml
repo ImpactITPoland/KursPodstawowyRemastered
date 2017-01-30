@@ -8,5 +8,7 @@
         Title="Kurs Podstawowy - 'Remastered'" Height="350" Width="525">
     <Grid>
 
+        <TextBlock x:Name="testowyTextBlock" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="To się wyświetla" VerticalAlignment="Center" FontSize="36"/>
+
     </Grid>
 </Window>

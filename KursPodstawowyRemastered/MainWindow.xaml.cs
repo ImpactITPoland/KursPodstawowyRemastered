@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
 
@@ -64,8 +65,34 @@ namespace KursPodstawowyRemastered
         public MainWindow()
         {
             InitializeComponent();
-            Instrukcje();
+            // Instrukcje();
+            Kolekcje();
         }
+        #endregion
+
+        #region Kolekcje
+        // Definicja tablicy z elementami typu int
+        int[] naszaTablica = new int[10];
+        // Definicja listy z elementami typu int
+        List<int> naszaList = new List<int>();
+
+        void Kolekcje()
+        {
+            // Dodawanie wartości do tablicy
+            naszaTablica[0] = 1;
+            naszaTablica[1] = 69;
+            naszaTablica[2] = 33;
+
+            // Dodawanie elementów do listy
+            naszaList.Add(1);
+            naszaList.Add(96);
+            naszaList.Add(33);
+
+            // Dodawanie źródła danych (kolekcji) do naszego ListView
+            listView.ItemsSource = naszaList;
+        }
+
+
         #endregion
 
         #region Instrukcje
@@ -126,8 +153,6 @@ namespace KursPodstawowyRemastered
         }
 
         #endregion
-
-
 
         #region Metody Pomocnicze
 

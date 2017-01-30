@@ -46,10 +46,18 @@ namespace KursPodstawowyRemastered
             InitializeComponent();
         }
 
+
+        int liczbaPolubien = 10; // Testowa zmienna
+
         //Metoda
         public void PierwszaMetoda()
         {
+            var naszPierwszyVar = liczbaPolubien; // magiczny var-1
+        }
 
+        public void DrugaMetoda()
+        {
+            var naszDrugiVar = liczbaPolubien; // magiczny var-2
         }
     }
 }

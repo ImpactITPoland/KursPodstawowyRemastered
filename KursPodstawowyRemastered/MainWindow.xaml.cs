@@ -39,6 +39,12 @@ namespace KursPodstawowyRemastered
 
         #endregion
 
+        #region Stale
+
+        const float PI = 3.14f;
+        const string naszeA = "aaaaa";
+
+        #endregion
 
         // Konstruktor klasy
         public MainWindow()
@@ -48,14 +54,18 @@ namespace KursPodstawowyRemastered
 
 
         int liczbaPolubien = 10; // Testowa zmienna
+        float r = 10f; // zmienna pomocnicza
 
         //Metoda
         public void PierwszaMetoda()
         {
+            var wynik = PI * r * r;
+            DrugaMetoda(naszeA);
+
             var naszPierwszyVar = liczbaPolubien; // magiczny var-1
         }
 
-        public void DrugaMetoda()
+        public void DrugaMetoda(string a)
         {
             var naszDrugiVar = liczbaPolubien; // magiczny var-2
         }

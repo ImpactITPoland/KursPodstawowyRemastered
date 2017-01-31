@@ -10,6 +10,56 @@ namespace KursPodstawowyRemastered
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        #region Konstruktory Klasy
+        // Bazowy konstruktor klasy
+        public MainWindow()
+        {
+            InitializeComponent();
+            // Instrukcje();
+            Kolekcje();
+        }
+        #endregion
+
+
+
+        #region Enumy
+
+        // Definicja Enum
+        enum StanyPostaci
+        {
+            Biega = 10,
+            Skacze = 20,
+            Plywa = 30
+        }
+
+        void Enumy()
+        {
+            // Ustawienie "wskaźnika / wartości"
+            StanyPostaci stany = StanyPostaci.Biega;
+
+            // Zastosowanie enum w switch
+            switch (stany)
+            {
+                case StanyPostaci.Biega:
+
+                    break;
+                case StanyPostaci.Skacze:
+                    break;
+                case StanyPostaci.Plywa:
+                    break;
+                default:
+                    break;
+            }
+
+            // Utworzenie kolekcji (Array) z enum
+            var wartosciEnum = Enum.GetValues(typeof(StanyPostaci));
+
+        }
+
+
+        #endregion
+
         #region Zmienne i ich typy
 
         #region Popularne typy zmiennych
@@ -59,16 +109,6 @@ namespace KursPodstawowyRemastered
 
         int liczbaPolubien = 10; // Testowa zmienna
         float r = 10f; // Zmienna pomocnicza
-
-        #region Konstruktory Klasy
-        // Bazowy konstruktor klasy
-        public MainWindow()
-        {
-            InitializeComponent();
-            // Instrukcje();
-            Kolekcje();
-        }
-        #endregion
 
         #region Kolekcje
         // Definicja tablicy z elementami typu int

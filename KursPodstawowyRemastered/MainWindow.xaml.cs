@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KursPodstawowyRemastered.Helpers;
+using KursPodstawowyRemastered.Klasy;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
@@ -16,12 +18,38 @@ namespace KursPodstawowyRemastered
         public MainWindow()
         {
             InitializeComponent();
+
             // Instrukcje();
-            Kolekcje();
+            //Kolekcje();
+            ObslugaKlas();
         }
         #endregion
 
 
+        #region Klasy
+
+        List<Czlowiek> listaLudzi = new List<Czlowiek>();
+
+        void ObslugaKlas()
+        {
+            //TestowaKlasa  testowaKlasa= new TestowaKlasa();
+            //TestowaKlasa klsaziloscia = new TestowaKlasa(1);
+
+            Licznik licznik = new Licznik();
+
+            var wynik = licznik.DodajDwieLiczbyCalkowite(2, 2);
+
+            Czlowiek czlek = new Czlowiek("Kazio", Rasy.Zielona, new DateTime(1998, 11,20));
+            Czlowiek czlek2 = new Czlowiek("Matrynka", Rasy.Fioletowa, new DateTime(1999, 01, 10));
+
+
+            listaLudzi.Add(czlek);
+            listaLudzi.Add(czlek2);
+
+            listView.ItemsSource = listaLudzi;
+        }
+
+        #endregion
 
         #region Enumy
 

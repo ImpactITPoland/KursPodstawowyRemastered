@@ -9,10 +9,13 @@
     <Grid>
 
         <TextBlock x:Name="testowyTextBlock" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="To się wyświetla" VerticalAlignment="Top" FontSize="36"/>
-        <ListView x:Name="listView" HorizontalAlignment="Center" Height="165" Margin="0,100,0,0" VerticalAlignment="Top" Width="165">
+        <ListView x:Name="listView" HorizontalAlignment="Center" Height="165" Margin="0,100,0,0" VerticalAlignment="Top" Width="456">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Imie}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Rasa}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DataUrodzenia}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Wiek}"/>
                 </GridView>
             </ListView.View>
         </ListView>

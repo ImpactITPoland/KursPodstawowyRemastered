@@ -2,6 +2,7 @@
 using KursPodstawowyRemastered.Klasy;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Windows;
 
@@ -12,6 +13,15 @@ namespace KursPodstawowyRemastered
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Zmenne o zasięgu klasy
+        Rasy rasy = new Rasy();
+        List<Czlowiek> listaLudzi = new List<Czlowiek>();
+
+        int liczbaPolubien = 10; // Testowa zmienna
+        float r = 10f; // Zmienna pomocnicza
+
+        #endregion
+
 
         #region Konstruktory Klasy
         // Bazowy konstruktor klasy
@@ -19,16 +29,15 @@ namespace KursPodstawowyRemastered
         {
             InitializeComponent();
 
+            ObslugaKlas();
             // Instrukcje();
             //Kolekcje();
-            ObslugaKlas();
+            InstrukcjeZlozone();
         }
         #endregion
 
 
         #region Klasy
-
-        List<Czlowiek> listaLudzi = new List<Czlowiek>();
 
         void ObslugaKlas()
         {
@@ -39,9 +48,8 @@ namespace KursPodstawowyRemastered
 
             var wynik = licznik.DodajDwieLiczbyCalkowite(2, 2);
 
-            Czlowiek czlek = new Czlowiek("Kazio", Rasy.Zielona, new DateTime(1998, 11,20));
+            Czlowiek czlek = new Czlowiek("Kazio", Rasy.Zielona, new DateTime(1998, 11, 20));
             Czlowiek czlek2 = new Czlowiek("Matrynka", Rasy.Fioletowa, new DateTime(1999, 01, 10), "dkjbfkjsnfdak", "ToJestLogin");
-
 
             listaLudzi.Add(czlek);
             listaLudzi.Add(czlek2);
@@ -135,8 +143,7 @@ namespace KursPodstawowyRemastered
 
         #endregion
 
-        int liczbaPolubien = 10; // Testowa zmienna
-        float r = 10f; // Zmienna pomocnicza
+
 
         #region Kolekcje
         // Definicja tablicy z elementami typu int
@@ -298,6 +305,80 @@ namespace KursPodstawowyRemastered
         }
         #endregion
 
+        #region Instrukcje złożone
+
+        /// <summary>
+        /// Metoda pozwalająca na test instrukcji złożonych
+        /// </summary>
+        void InstrukcjeZlozone()
+        {
+            #region Instrukcja IF
+            // Instrukcja IF
+            if (true)
+            { }
+            if else
+            { }
+            else
+            { }
+
+            // Instrukcja if skrócpna wersja
+            int a;
+            if (true) a = 1;
+            else a = 2;
+
+            #endregion
+
+            #region Instrukcja Switch
+
+            switch (rasy)
+            {
+                case Rasy.Biała:
+                    break;          // break; wychodzi z instrukcji Switch
+                case Rasy.Czarna:
+                    break;
+                case Rasy.Zielona:
+                    break;
+                case Rasy.Fioletowa:
+                    break;
+                default:            // gdy żaden warunek nie jest spełniony
+                    break;
+            }
+
+            #endregion
+
+            #region Pętle
+
+            // Instrukcja for
+            for (int i = 0; i < listaLudzi.Count; i++)
+            {
+                var a = listaLudzi.ElementAt(i);
+            }
+
+            // Instrukcja foreach
+            foreach (var item in listaLudzi)
+            {
+                var a = item;
+            }
+
+            // Instrukcja while
+            int licznikWhile = 0;
+            while (listaLudzi.Count > licznikWhile)
+            {
+                var a = listaLudzi[licznikWhile];
+                licznikWhile++;
+            }
+
+            // Instrukcja do-while
+            do
+            {
+
+            } while (false);
+
+            #endregion
+
+
+        }
+        #endregion
 
     }
 }

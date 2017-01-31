@@ -16,6 +16,8 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Rasa}"/>
                     <GridViewColumn DisplayMemberBinding="{Binding DataUrodzenia}"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Wiek}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Login}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Haslo}"/>
                 </GridView>
             </ListView.View>
         </ListView>
